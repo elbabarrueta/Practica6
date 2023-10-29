@@ -405,18 +405,18 @@ public class Ventana extends JFrame{
     		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
     			Component comp = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
 				
-    			Municipio Mactual = muniEnprovin.get(row);
-    			if(Mactual.getHabitantes()> seleccionado.getHabitantes()) {
-    				comp.setBackground(redColor);
-    			}else if(Mactual.getHabitantes() == seleccionado.getHabitantes()) {
-    				comp.setBackground(Color.WHITE);
-    			}else {
-    				comp.setBackground(greenColor);
-    			}
-    			
+    			if(column == 1) {
+    				Municipio Mactual = muniEnprovin.get(row);
+        			if(Mactual.getHabitantes()> seleccionado.getHabitantes()) {
+        				comp.setBackground(redColor);
+        			}else if(Mactual.getHabitantes() == seleccionado.getHabitantes()) {
+        				comp.setBackground(Color.WHITE);
+        			}else {
+        				comp.setBackground(greenColor);
+        			}
+    			}	
     	        return comp;
     		}
-    		
     	});
     	municipioTable.repaint();
     }

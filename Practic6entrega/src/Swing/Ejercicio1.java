@@ -7,7 +7,7 @@ import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class Ejercicio {
+public class Ejercicio1 {
 	
 	private static JFrame ventana;
 	private static DataSetMunicipios dataset;
